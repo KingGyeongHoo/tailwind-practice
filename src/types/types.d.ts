@@ -4,16 +4,8 @@ interface BgInfo {
   text: string;
 }
 
-interface Button {
-  mainText: string;
-  bgColor: string;
-  textColor: string;
-}
-
-interface Input {
-  type: string;
-  placeholder: string;
-}
+type InputProps = React.ComponentPropsWithoutRef<"input">;
+type ButtonProps = React.ComponentPropsWithoutRef<"input">;
 
 interface Content {
   height: string;
@@ -21,5 +13,6 @@ interface Content {
 }
 
 interface Agree {
+  agreeFor: string;
   children: React.ReactNode;
 }
