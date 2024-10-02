@@ -5,7 +5,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <input
       className={twMerge(
-        `flex justify-center items-center w-[325px] h-[44px] px-[20px] py-[14px] text-sm border border-[#4F4F4F] rounded-lg`,
+        `flex justify-center items-center w-[325px] h-[44px] px-[20px] py-[14px] text-sm border border-gray-700 rounded-lg`,
         className
       )}
       {...rest}

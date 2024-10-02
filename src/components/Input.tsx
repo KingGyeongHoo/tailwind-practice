@@ -5,7 +5,7 @@ export const Input = (props: InputProps) => {
   return (
     <input
       className={twMerge(
-        "w-[325px] h-[44px] px-[16px] py-[14px] border border-[#4F4F4F] placeholder:text-[#ACACAC] rounded-lg",
+        "w-[325px] h-[44px] px-[16px] py-[14px] border border-gray-500 placeholder:text-gray-300 rounded-lg",
         className
       )}
       {...rest}

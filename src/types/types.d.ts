@@ -17,6 +17,7 @@ interface Content {
 }
 
 interface Agree {
+  className: string;
   agreeFor: string;
   children: React.ReactNode;
 }
@@ -25,4 +26,12 @@ interface Info {
   mainText: string;
   inputInfo: Input[];
   buttonInfo: Button[];
+}
+
+interface Theme {
+  name: string;
+  bgColor: string;
+  checkedBgColor: string;
+  borderColor: string;
+  textColor: string;
 }
