@@ -5,20 +5,14 @@ import Input from "./Input";
 import { twMerge } from "tailwind-merge";
 
 export const Card = ({ theme }: { theme: Theme }) => {
-  const {
-    bgColor,
-    checkedBgColor,
-    borderColor,
-    outlineColor,
-    textColor,
-    ...rest
-  } = theme;
+  const { bgColor, checkedBgColor, borderColor, outlineColor, textColor } =
+    theme;
   const [isLogin, setIsLogin] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const authTypeChange = (e: any) => {
+  const authTypeChange = () => {
     setIsLogin(!isLogin);
     setName("");
     setEmail("");
@@ -75,7 +69,7 @@ export const Card = ({ theme }: { theme: Theme }) => {
             type="button"
             value={isLogin ? "가입하기" : "로그인으로 이동"}
             className={twMerge("bg-white text-gray-500")}
-            onClick={(e) => authTypeChange(e)}
+            onClick={authTypeChange}
           ></Button>
         </div>
         {isLogin ? (

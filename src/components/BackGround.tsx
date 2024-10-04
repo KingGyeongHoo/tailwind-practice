@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 
 export const BackGround = ({ theme }: { theme: Theme }) => {
-  const { bgColor, darkBgColor, ...rest } = theme;
+  const { darkBgColor } = theme;
   return (
     <div className="absolute top-0 left-0 z-0 w-[100%] h-[100%]  overflow-hidden">
       <div
