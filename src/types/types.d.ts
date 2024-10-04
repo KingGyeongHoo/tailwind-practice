@@ -31,7 +31,9 @@ interface Info {
 interface Theme {
   name: string;
   bgColor: string;
+  darkBgColor: string;
   checkedBgColor: string;
   borderColor: string;
+  outlineColor: string;
   textColor: string;
 }

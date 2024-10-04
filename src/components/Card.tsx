@@ -5,7 +5,14 @@ import Input from "./Input";
 import { twMerge } from "tailwind-merge";
 
 export const Card = ({ theme }: { theme: Theme }) => {
-  const { bgColor, checkedBgColor, borderColor, textColor, ...rest } = theme;
+  const {
+    bgColor,
+    checkedBgColor,
+    borderColor,
+    outlineColor,
+    textColor,
+    ...rest
+  } = theme;
   const [isLogin, setIsLogin] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -20,10 +27,12 @@ export const Card = ({ theme }: { theme: Theme }) => {
 
   return (
     <div
-      className={`flex flex-col gap-[20px] w-[375px] h-fit border rounded-lg border-black px-[24px] py-[40px]`}
+      className={`relative z-10 flex flex-col items-center gap-[16px] w-[400px] h-fit bg-white px-[24px] py-[40px] shadow-lg`}
     >
       <div className="flex flex-col gap-[10px]">
-        <h1 className={twMerge("text-2xl font-bold text-center", textColor)}>
+        <h1
+          className={twMerge("text-3xl font-black text-center mb-4", textColor)}
+        >
           {isLogin ? "로그인" : "회원가입"}
         </h1>
       </div>
@@ -36,6 +45,7 @@ export const Card = ({ theme }: { theme: Theme }) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              className={outlineColor}
             ></Input>
           )}
           <Input
@@ -43,6 +53,7 @@ export const Card = ({ theme }: { theme: Theme }) => {
             placeholder="이메일을 입력하세요"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className={outlineColor}
             required
           ></Input>
           <Input
@@ -50,6 +61,7 @@ export const Card = ({ theme }: { theme: Theme }) => {
             placeholder="비밀번호를 입력하세요"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className={outlineColor}
             required
           ></Input>
         </div>
@@ -62,7 +74,7 @@ export const Card = ({ theme }: { theme: Theme }) => {
           <Button
             type="button"
             value={isLogin ? "가입하기" : "로그인으로 이동"}
-            className="bg-white text-gray-500"
+            className={twMerge("bg-white text-gray-500")}
             onClick={(e) => authTypeChange(e)}
           ></Button>
         </div>
@@ -73,7 +85,7 @@ export const Card = ({ theme }: { theme: Theme }) => {
           </div>
         ) : (
           <Agree
-            className={twMerge(borderColor, checkedBgColor)}
+            className={`${borderColor} ${checkedBgColor}`}
             agreeFor={isLogin ? "login" : "signin"}
           >
             <p className="text-sm text-gray-500 ml-1 ">약관에 동의합니다</p>
