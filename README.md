@@ -1,50 +1,19 @@
-# React + TypeScript + Vite
+# Tailwind-Practice
+![image](https://github.com/user-attachments/assets/6efb7d4e-0bd8-4f7c-a1d5-dd4653ca04d8)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📃소개
+Tailwind CSS 학습 차 간단하게 로그인/회원가입 페이지를 만들어 보았습니다 
 
-Currently, two official plugins are available:
+## 🛠기술 스택
+- **Frontend**: <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white"><img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"><img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"><img src="https://img.shields.io/badge/TailwindCss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💻주요 기능
+![Oct-04-2024 11-12-32](https://github.com/user-attachments/assets/c701d5fc-7553-4029-ac72-da13d9c56c25)
+1. 로그인, 회원가입 UI 구현 및 Tailwind 스타일링 (로그인/회원가입 기능은 미구현)
 
-## Expanding the ESLint configuration
+![Oct-04-2024 11-15-39](https://github.com/user-attachments/assets/566f7242-1ced-45f3-aa65-d8fc814ad1c3)
+2. 테마 기능 구현 및 React state를 이용해 테마 적용
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📎링크
+### [배포](tailwind-practice-lime.vercel.app)
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
