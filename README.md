@@ -15,5 +15,5 @@ Tailwind CSS 학습 차 간단하게 로그인/회원가입 페이지를 만들�
 2. 테마 기능 구현 및 tailwind.config에 커스텀 애니메이션 추가 및 적용
 
 ## 📎링크
-### [배포](tailwind-practice-lime.vercel.app)
+### [배포](https://tailwind-practice-lime.vercel.app)
 
